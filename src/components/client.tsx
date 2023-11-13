@@ -30,7 +30,7 @@ export default function Client() {
     }
 
     return (
-        <MediaCard heading="TRS Status" text="Offline or Online">
+        <MediaCard heading="Status example" text="">
             <CircleTwoToneIcon color={statusProp ? 'primary' : 'secondary'} />
         </MediaCard>
     );

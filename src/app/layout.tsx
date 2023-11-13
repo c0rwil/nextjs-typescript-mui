@@ -13,7 +13,11 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import HomeIcon from '@mui/icons-material/Home';
-import StarIcon from '@mui/icons-material/Star';
+import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
+import ScheduleIcon from '@mui/icons-material/Schedule';
+import QueueIcon from '@mui/icons-material/Queue';
+import SmartToyIcon from '@mui/icons-material/SmartToy';
+import BlurOnIcon from '@mui/icons-material/BlurOn';
 import ChecklistIcon from '@mui/icons-material/Checklist';
 import SettingsIcon from '@mui/icons-material/Settings';
 import SupportIcon from '@mui/icons-material/Support';
@@ -28,11 +32,10 @@ export const metadata = {
 const DRAWER_WIDTH = 240;
 
 const LINKS = [
-  { text: 'Home', href: '/', icon: HomeIcon },
-  { text: 'queue', href: '/queue', icon: StarIcon },
-  { text: 'scheduler', href: '/scheduler', icon: StarIcon },
-    { text: 'runner', href: '/runner', icon: StarIcon },
-
+    { text: 'Home', href: '/', icon: BlurOnIcon, color: 'primary' }, // or 'error', 'action', etc.
+    { text: 'Queue', href: '/queue', icon: QueueIcon, color: 'secondary' },
+    { text: 'Scheduler', href: '/scheduler', icon: ScheduleIcon, color: 'success' },
+    { text: 'Runner', href: '/runner', icon: DirectionsRunIcon, color: 'warning' },
 ];
 
 const PLACEHOLDER_LINKS = [
@@ -48,8 +51,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <ThemeRegistry>
         <AppBar position="fixed" sx={{ zIndex: 2000 }}>
           <Toolbar sx={{ backgroundColor: 'background.paper' }}>
-            <DashboardIcon sx={{ color: '#444', mr: 2, transform: 'translateY(-2px)' }} />
-            <Typography variant="h6" color="text.primary">
+            <SmartToyIcon color ={"primary"}/>
+            <Typography variant="h6" color="primary" paddingLeft={"1%"}>
               ion test engine
             </Typography>
           </Toolbar>
@@ -74,8 +77,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {LINKS.map(({ text, href, icon: Icon }) => (
                 <ListItem key={href} disablePadding>
                   <ListItemButton component={Link} href={href}>
-                    <ListItemIcon>
-                      <Icon />
+                    <ListItemIcon >
+                      <Icon color={"primary"}/>
                     </ListItemIcon>
                     <ListItemText primary={text} />
                   </ListItemButton>
@@ -83,18 +86,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             ))}
           </List>
           <Divider sx={{ mt: 'auto' }} />
-          <List>
-            {PLACEHOLDER_LINKS.map(({ text, icon: Icon }) => (
-                <ListItem key={text} disablePadding>
-                  <ListItemButton>
-                    <ListItemIcon>
-                      <Icon />
-                    </ListItemIcon>
-                    <ListItemText primary={text} />
-                  </ListItemButton>
-                </ListItem>
-            ))}
-          </List>
+          {/*<List>*/}
+          {/*  {PLACEHOLDER_LINKS.map(({ text, icon: Icon }) => (*/}
+          {/*      <ListItem key={text} disablePadding>*/}
+          {/*        <ListItemButton>*/}
+          {/*          <ListItemIcon>*/}
+          {/*            <Icon />*/}
+          {/*          </ListItemIcon>*/}
+          {/*          <ListItemText primary={text} />*/}
+          {/*        </ListItemButton>*/}
+          {/*      </ListItem>*/}
+          {/*  ))}*/}
+          {/*</List>*/}
         </Drawer>
         <Box
             component="main"

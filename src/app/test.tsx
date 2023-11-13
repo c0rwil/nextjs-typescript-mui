@@ -19,10 +19,3 @@ export default function Page({
         </section>
     );
 }
-// export const getServerSideProps: GetServerSideProps<{
-//     repo: boole;
-// }> = async() => {
-//     const res = await fetch('http://google.com');
-//     const repo = await res.json();
-//     return {props:{repo}};
-// };

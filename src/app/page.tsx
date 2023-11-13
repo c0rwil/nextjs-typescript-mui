@@ -20,6 +20,21 @@ export default function HomePage() {
                     <Grid xs={"auto"}>
                         <Client/>
                     </Grid>
+                    <Grid xs={"auto"}>
+                        <Client/>
+                    </Grid>
+                    <Grid xs={"auto"}>
+                        <Client/>
+                    </Grid>
+                    <Grid xs={"auto"}>
+                        <Client/>
+                    </Grid>
+                    <Grid xs={"auto"}>
+                        <Client/>
+                    </Grid>
+                    <Grid xs={"auto"}>
+                        <Client/>
+                    </Grid>
                 </Grid>
             </div>
             <Drawer
