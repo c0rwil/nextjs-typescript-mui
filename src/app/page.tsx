@@ -14,9 +14,9 @@ import Client from '@/components/client';
 export default function HomePage() {
 
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center'}}>
             <div>
-                <Grid container rowSpacing={3} columnSpacing={3}>
+                <Grid container rowSpacing={3} columnSpacing={3} justifyContent="center">
                     <Grid xs={"auto"}>
                         <Client/>
                     </Grid>

@@ -1,8 +1,6 @@
 // Client.js
 "use client"
 
-// Client.tsx
-// use client
 import React, { useEffect, useState } from 'react';
 import CircleTwoToneIcon from '@mui/icons-material/CircleTwoTone';
 import MediaCard from '@/components/MediaCard';
@@ -26,7 +24,7 @@ export default function Client() {
     }, []);
 
     if (statusProp === null) {
-        return <div>Loading...</div>; // Or any loading state representation
+        return <div>Loading...</div>; // Or any loading state
     }
 
     return (
