@@ -15,17 +15,17 @@ const MediaCard: React.FC<MediaCardProps> = ({ heading, text, children }) => {
     return (
         <Card>
             <CardContent>
-                <Typography gutterBottom variant="h5" component="div" align={"center"}>
+                <Typography gutterBottom variant="h5" component="div" align={"center"} style={{ color: 'silver' }}>
                     {heading}
                 </Typography>
-                <Typography variant="body2" color="text.secondary" align={"center"}>
+                <Typography variant="body2" color="text.primary" align={"center"}>
                     {children}
                 </Typography>
             </CardContent>
 
             <CardActions>
-                <Button size="small">example button 1</Button>
-                <Button size="small">example button 2</Button>
+                <Button size="small" color="primary">example button 1</Button>
+                <Button size="small" color="primary">example button 2</Button>
             </CardActions>
         </Card>
     );

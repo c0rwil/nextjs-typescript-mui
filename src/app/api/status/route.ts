@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(req: NextRequest) {
     try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+        const response = await fetch('https://jsonplaceholder.typicode.com/todos/0');
         const xStatus = response.status === 200;
         return NextResponse.json({ xStatus });
     } catch (error) {

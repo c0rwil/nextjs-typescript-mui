@@ -29,10 +29,10 @@ export const metadata = {
 const DRAWER_WIDTH = 240;
 
 const LINKS = [
-    { text: 'Home', href: '/', icon: BlurOnIcon, color: 'primary' }, // or 'error', 'action', etc.
-    { text: 'Queue', href: '/queue', icon: QueueIcon, color: 'secondary' },
-    { text: 'Scheduler', href: '/scheduler', icon: ScheduleIcon, color: 'success' },
-    { text: 'Runner', href: '/runner', icon: DirectionsRunIcon, color: 'warning' },
+    { text: 'Home', href: '/', icon: BlurOnIcon},
+    { text: 'Queue', href: '/queue', icon: QueueIcon },
+    { text: 'Scheduler', href: '/scheduler', icon: ScheduleIcon},
+    { text: 'Runner', href: '/runner', icon: DirectionsRunIcon },
 ];
 
 const PLACEHOLDER_LINKS = [
@@ -48,9 +48,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <ThemeRegistry>
         <AppBar position="fixed" sx={{ zIndex: 2000 }}>
           <Toolbar sx={{ backgroundColor: 'background.paper' }}>
-            <SmartToyIcon color ={"primary"}/>
-            <Typography variant="h6" color="primary" paddingLeft={"1%"}>
-              ion test engine
+            <SmartToyIcon color ="primary"/>
+            <Typography variant="h6" style={{ color: 'silver' }} paddingLeft={"1%"}>
+              Ion Test Engine
             </Typography>
           </Toolbar>
         </AppBar>
@@ -69,15 +69,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             variant="permanent"
             anchor="left"
         >
-          <Divider />
+          <Divider/>
           <List>
             {LINKS.map(({ text, href, icon: Icon }) => (
                 <ListItem key={href} disablePadding>
                   <ListItemButton component={Link} href={href}>
-                    <ListItemIcon >
-                      <Icon color={"primary"}/>
+                    <ListItemIcon>
+                      <Icon color= "primary"/>
                     </ListItemIcon>
-                    <ListItemText primary={text} />
+                    <ListItemText primary={text} style={{ color: 'silver' }}/>
                   </ListItemButton>
                 </ListItem>
             ))}

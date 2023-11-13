@@ -2,7 +2,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react';
-import CircleTwoToneIcon from '@mui/icons-material/CircleTwoTone';
+import CircleIcon from '@mui/icons-material/Circle';
 import MediaCard from '@/components/MediaCard';
 
 export default function Client() {
@@ -26,11 +26,18 @@ export default function Client() {
     if (statusProp === null) {
         return <div>Loading...</div>; // Or any loading state
     }
-
-    return (
-        <MediaCard heading="Status example" text="">
-            <CircleTwoToneIcon color={statusProp ? 'primary' : 'secondary'} />
+    if(statusProp){
+        return (
+            <MediaCard heading="Status Example" text="">
+                <CircleIcon style={{ color: 'green' }} />
+            </MediaCard>)
+    }
+    else{
+        return (
+        <MediaCard heading="Status Example" text="">
+            <CircleIcon color={'error'} />
         </MediaCard>
     );
+    }
 }
 
