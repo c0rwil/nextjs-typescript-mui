@@ -13,7 +13,7 @@ interface MediaCardProps {
 
 const MediaCard: React.FC<MediaCardProps> = ({ heading, text, children }) => {
     return (
-        <Card>
+        <Card style ={{borderRadius:"10%"}}>
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div" align={"center"} style={{ color: 'silver' }}>
                     {heading}
